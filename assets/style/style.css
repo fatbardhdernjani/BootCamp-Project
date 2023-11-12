@@ -1,0 +1,226 @@
+@import url("https://fonts.cdnfonts.com/css/museo-sans-rounded");
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+}
+
+h1 {
+  font-weight: 600;
+  font-family: "Museo Sans Rounded", sans-serif;
+}
+
+h2 {
+  color: #4a4a4a;
+  font-weight: 600;
+  font-family: "Museo Sans Rounded", sans-serif;
+}
+
+h3 {
+  color: #4a4a4a;
+  font-family: "Museo Sans Rounded", sans-serif;
+}
+
+p {
+  color: #8d8d8d;
+  font-family: "Museo Sans Rounded", sans-serif;
+}
+
+a {
+  color: #de3723;
+  text-decoration: none;
+  font-family: "Museo Sans Rounded", sans-serif;
+}
+
+ul {
+  list-style-type: none;
+}
+
+span {
+  font-family: "Museo Sans Rounded", sans-serif;
+}
+
+section, footer {
+  padding: 60px 0px;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+header {
+  display: flex;
+  align-items: center;
+}
+header .container {
+  border: 1px solid red;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+header ul {
+  display: flex;
+}
+header ul li {
+  margin: 0px 40px;
+}
+header ul li a {
+  color: #6d6e70;
+  font-size: 15px;
+  font-weight: 600;
+}
+header ul li a:hover {
+  text-decoration: underline;
+}
+
+main {
+  padding: 160px 0px;
+  background-image: url("/assets/bg.jpg");
+}
+main .container {
+  border: 1px solid red;
+}
+main .container .slogan {
+  text-align: center;
+}
+main .container h2 {
+  font-size: 48px;
+  color: #fff;
+}
+main .container .register-transfer {
+  text-align: center;
+  padding: 50px 0px;
+}
+main .container .register-transfer ul li {
+  display: inline;
+  padding: 0px 5px;
+}
+main .container .register-transfer a {
+  padding: 10px 30px;
+  border-radius: 10px 0px 0px 10px;
+  background-color: #8cc1c1;
+  color: #fff;
+  font-weight: 600;
+}
+main .container .register-transfer a:hover {
+  background-color: #6582e0;
+}
+main .container .register-transfer .second-a {
+  padding: 10px 30px;
+  border-radius: 0px 10px 10px 0px;
+  background-color: #6582e0;
+  color: #fff;
+  font-weight: 600;
+}
+main .container .register-transfer .second-a:hover {
+  background-color: #8cc1c1;
+}
+main .container .search-domain {
+  text-align: center;
+  align-items: center;
+}
+main .container .search-domain input[type=text] {
+  border: none;
+  background-color: #fff;
+  padding: 15px 150px;
+  border-radius: 10px 0px 0px 10px;
+}
+main .container .search-domain ::placeholder {
+  font-size: 14px;
+  float: left;
+  font-family: "Museo Sans Rounded", sans-serif;
+}
+main .container .search-domain a {
+  padding: 15px 30px;
+  border-radius: 0px 10px 10px 0px;
+  color: #fff;
+  background-color: #de3723;
+}
+main .container .hero-prices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px 0px;
+}
+main .container .hero-prices p {
+  color: #fff;
+  padding: 0px 25px;
+}
+
+#packages .container .products {
+  text-align: center;
+}
+#packages .container .products h1 {
+  font-size: 32px;
+  padding: 30px 0px;
+}
+#packages .container .products ul li {
+  display: inline;
+  padding: 0px 10px;
+}
+#packages .container .products ul li a {
+  border-radius: 5px;
+  padding: 8px 16px;
+  background-color: #eee;
+  color: #6d6e70;
+}
+#packages .container .products ul li .active {
+  color: #fff;
+  background-color: #8cc1c1;
+}
+#packages .container .promos {
+  padding: 40px 0px;
+}
+#packages .container .promos h2 {
+  text-align: center;
+}
+#packages .container .promos .check {
+  text-align: center;
+  color: #8d8d8d;
+  padding: 20px 0px;
+}
+#packages .container .promos .promos-details1 {
+  display: grid;
+  gap: 100px;
+  grid-template-columns: 1fr 1fr 1fr;
+  text-align: center;
+}
+#packages .container .promos .promo1 {
+  background-color: #5F85E4;
+  border: 1px solid gray;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.16), 0 4px 5px 0 rgba(0, 0, 0, 0.05), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  padding: 70px 0px;
+}
+#packages .container .promos .promo1 h3, #packages .container .promos .promo1 span, #packages .container .promos .promo1 p, #packages .container .promos .promo1 a {
+  padding: 20px 0px;
+  color: #fff;
+}
+#packages .container .promos .promo1 p {
+  background-color: #de3723;
+  padding: 10px;
+}
+#packages .container .promos .promo2, #packages .container .promos .promo3 {
+  border: 1px solid gray;
+  border-radius: 15px;
+  box-shadow: 0 2px 4px -1px rgba(0, 0, 0, 0.16), 0 4px 5px 0 rgba(0, 0, 0, 0.05), 0 1px 10px 0 rgba(0, 0, 0, 0.08);
+  padding: 70px 0px;
+}
+#packages .container .promos .promo2 h3, #packages .container .promos .promo2 span, #packages .container .promos .promo2 p, #packages .container .promos .promo2 a, #packages .container .promos .promo3 h3, #packages .container .promos .promo3 span, #packages .container .promos .promo3 p, #packages .container .promos .promo3 a {
+  padding: 20px 0px;
+}
+
+@media screen and (min-width: 800px) {
+  .container {
+    width: 1320px;
+  }
+  header {
+    height: 110px;
+    flex-direction: row;
+  }
+}
+@media screen and (max-width: 768px) {
+  .container {
+    width: 90%;
+  }
+}/*# sourceMappingURL=style.css.map */

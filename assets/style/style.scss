@@ -1,0 +1,301 @@
+@import url('https://fonts.cdnfonts.com/css/museo-sans-rounded');
+
+$h3: #4a4a4a;
+$h2: #4a4a4a;
+$topheader: #2e3133;
+$footer: #2E3133;
+$li-a: #6d6e70;
+
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;    
+}
+
+h1 {
+    font-weight: 600;
+    font-family: 'Museo Sans Rounded', sans-serif;
+}
+
+h2 {
+    color: $h2;
+    font-weight: 600;
+    font-family: 'Museo Sans Rounded', sans-serif;
+}
+
+h3 {
+    color: $h3;
+    font-family: 'Museo Sans Rounded', sans-serif;
+}
+
+p {
+    color: #8d8d8d;
+    font-family: 'Museo Sans Rounded', sans-serif;
+}
+
+a {
+    color: #de3723;
+    text-decoration: none;
+    font-family: 'Museo Sans Rounded', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+span {
+    font-family: 'Museo Sans Rounded', sans-serif;
+}
+
+section, footer {
+    padding: 60px 0px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+header {
+    display: flex;
+    align-items: center;
+
+    .container {
+        border: 1px solid red;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    ul {
+        display: flex;
+        li {
+            margin: 0px 40px;
+            a {
+                color: #6d6e70;
+                font-size: 15px;
+                font-weight: 600;
+                
+                &:hover {
+                    text-decoration: underline;
+                }
+            }
+        }
+    }  
+}
+
+main { 
+    padding: 160px 0px;
+    background-image: url('/assets/bg.jpg');
+
+    .container {
+        border: 1px solid red;
+
+        .slogan { 
+            text-align: center; 
+        }
+
+        h2 { 
+            font-size: 48px;
+            color: #fff;
+         }
+
+         .register-transfer {
+            text-align: center;
+            padding: 50px 0px;
+
+            ul li {
+                display: inline;
+                padding: 0px 5px;
+            }
+            
+            a {
+                padding: 10px 30px;
+                border-radius: 10px 0px 0px 10px;
+                background-color: #8cc1c1;
+                color: #fff;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: #6582e0;
+                }
+            }
+
+            .second-a {
+                padding: 10px 30px;
+                border-radius: 0px 10px 10px 0px;
+                background-color: #6582e0;
+                color: #fff;
+                font-weight: 600;
+
+                &:hover {
+                    background-color: #8cc1c1;
+                }
+            }
+
+         }
+
+         .search-domain {
+            text-align: center;
+            align-items: center;
+
+            input[type=text] {
+                border: none;
+                background-color: #fff;
+                padding: 15px 150px;
+                border-radius: 10px 0px 0px 10px;
+            }
+
+            ::placeholder {
+                font-size: 14px;
+                float: left;
+                font-family: 'Museo Sans Rounded', sans-serif;
+            }
+
+            a {
+                padding: 15px 30px;
+                border-radius: 0px 10px 10px 0px;
+                color: #fff;
+                background-color: #de3723;
+            }
+
+         }
+         
+         .hero-prices {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 30px 0px;
+
+            p {
+                color: #fff;
+                padding: 0px 25px;
+            }
+         }
+    }
+}
+
+#packages {
+    .container {
+        .products {
+            text-align: center;
+
+            h1 {
+                font-size: 32px;
+                padding: 30px 0px;
+            }
+
+            ul li {
+                display: inline;
+                padding: 0px 10px;
+
+                a {
+                    border-radius: 5px;
+                    padding: 8px 16px;
+                    background-color: #eee;
+                    color: #6d6e70;
+                }
+
+                .active {
+                    color: #fff;
+                    background-color: #8cc1c1;
+                }
+            }
+        }
+
+        .promos {
+            padding: 40px 0px;
+
+            h2 {
+                text-align: center;
+            }
+            
+            .check {
+                text-align: center;
+                color: #8d8d8d;
+                padding: 20px 0px;
+            }
+
+            .promos-details1 {
+                display: grid;
+                gap: 100px;                
+                grid-template-columns: 1fr 1fr 1fr;
+                text-align: center;
+            } 
+
+            .promo1 {
+                background-color: #5F85E4;
+                border: 1px solid gray;
+                border-radius: 15px;
+                box-shadow: 0 2px 4px -1px rgba(0,0,0,.16), 0 4px 5px 0 rgba(0,0,0,.05), 0 1px 10px 0 rgba(0,0,0,.08);
+                padding: 70px 0px;
+
+                h3, span, p, a {
+                    padding: 20px 0px;
+                    color: #fff;
+                }
+
+                p {
+                    background-color: #de3723;
+                    padding: 10px;
+                }
+            }
+
+            .promo2, .promo3 {
+                border: 1px solid gray;
+                border-radius: 15px;
+                box-shadow: 0 2px 4px -1px rgba(0,0,0,.16), 0 4px 5px 0 rgba(0,0,0,.05), 0 1px 10px 0 rgba(0,0,0,.08);
+                padding: 70px 0px;
+
+                h3, span, p, a {
+                    padding: 20px 0px;
+                }
+
+
+            }
+
+        }
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// Versions for Mobile and Desktop //
+
+
+@media screen and (min-width: 800px) {
+    .container {
+      width: 1320px;
+    }
+
+    header {
+        height: 110px;
+        flex-direction: row;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .container {
+      width: 90%;
+    }
+}
+  
