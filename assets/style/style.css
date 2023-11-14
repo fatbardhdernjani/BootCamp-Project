@@ -119,9 +119,6 @@ main {
   padding: 160px 0px;
   background-image: url("/assets/bg.jpg");
 }
-main .container {
-  border: 1px solid red;
-}
 main .container .slogan {
   text-align: center;
 }
