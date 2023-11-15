@@ -115,14 +115,15 @@ header ul li a span {
   color: white;
 }
 
-main {
+main .container {
   padding: 160px 0px;
   background-image: url("/assets/bg.jpg");
+  width: 100%;
 }
 main .container .slogan {
   text-align: center;
 }
-main .container h2 {
+main .container h1 {
   font-size: 48px;
   color: #fff;
 }
@@ -227,7 +228,6 @@ main .container .hero-prices p {
 }
 #packages .container .promos .promos-details1 {
   display: grid;
-  grid-template-columns: 30% 30% 30%;
   height: 100%;
   justify-content: center;
   text-align: center;
@@ -241,7 +241,7 @@ main .container .hero-prices p {
   box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
   background: white none repeat scroll 0 0;
   border-radius: 8px;
-  transition: box-shadow 0.2s ease-in-out 0s;
+  transition: all 0.4s ease-in-out;
   overflow: hidden;
   padding: 50px 20px;
 }
@@ -338,7 +338,6 @@ main .container .hero-prices p {
 }
 
 #trusted .container {
-  flex-direction: column;
   text-align: center;
 }
 #trusted .container .star {
@@ -363,52 +362,6 @@ main .container .hero-prices p {
 }
 #trusted .container .star3 .partners img {
   padding: 0px 30px;
-}
-#trusted .container .star4 {
-  margin-top: 35px;
-}
-#trusted .container .star4 .top-content {
-  display: flex;
-  justify-content: space-evenly;
-  align-items: center;
-}
-#trusted .container .star4 .top-content .left-sign i {
-  color: black;
-  font-size: 30px;
-}
-#trusted .container .star4 .top-content .mid-content {
-  box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
-  background: white none repeat scroll 0 0;
-  border-radius: 8px;
-  transition: box-shadow 0.2s ease-in-out 0s;
-  overflow: hidden;
-  line-height: 50px;
-  padding: 84px 64px 84px;
-}
-#trusted .container .star4 .top-content .mid-content:hover {
-  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-}
-#trusted .container .star4 .top-content .mid-content p {
-  font-size: 20px;
-  font-weight: 600;
-}
-#trusted .container .star4 .top-content .mid-content img {
-  margin-top: 30px;
-}
-#trusted .container .star4 .top-content .mid-content span {
-  font-weight: 400;
-  color: #4a4a4a;
-}
-#trusted .container .star4 .nulls-more {
-  margin-top: 20px;
-}
-#trusted .container .star4 .nulls-more a {
-  color: gray;
-  padding: 0px 5px;
-}
-#trusted .container .star4 .nulls-more .active {
-  color: black;
-  font-weight: bold;
 }
 
 #knowledges .container .titles {
@@ -476,16 +429,14 @@ main .container .hero-prices p {
 
 #inspired .container .inspired {
   display: grid;
-  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
   align-items: center;
-  width: 80%;
-  margin: 0 auto;
-  justify-content: center;
   box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
   border-radius: 8px;
 }
 #inspired .container .inspired img {
-  margin: 20px;
+  margin: 50px;
   height: 200px;
 }
 #inspired .container .inspired .more-inspired h2 {
@@ -493,6 +444,15 @@ main .container .hero-prices p {
   line-height: 2;
 }
 #inspired .container .inspired .more-inspired p {
+  color: #6d6e70;
+  font-weight: 400;
+  line-height: 1.5;
+}
+#inspired .container .inspired .more-inspired3 h2 {
+  font-size: 34px;
+  line-height: 2;
+}
+#inspired .container .inspired .more-inspired3 p {
   color: #6d6e70;
   font-weight: 400;
   line-height: 1.5;
@@ -523,7 +483,7 @@ main .container .hero-prices p {
 }
 #questions .container .questions-image {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  gap: 30px;
 }
 #questions .container .questions-image .questions {
   margin-top: 25px;
@@ -623,9 +583,240 @@ footer .container .footer .foot2 a, footer .container .footer .foot3 a, footer .
     height: 100px;
     flex-direction: row;
   }
+  #packages .promos-details1 {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #knowledges .box {
+    grid-template-columns: repeat(3, 1fr);
+  }
+  #trusted .star4 {
+    margin-top: 35px;
+  }
+  #trusted .star4 .top-content {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+  }
+  #trusted .star4 .top-content .left-sign i {
+    color: black;
+    font-size: 30px;
+  }
+  #trusted .star4 .top-content .mid-content {
+    box-shadow: 0 1px 6px 0 rgba(0, 0, 0, 0.15);
+    background: white none repeat scroll 0 0;
+    border-radius: 8px;
+    transition: box-shadow 0.2s ease-in-out 0s;
+    overflow: hidden;
+    line-height: 50px;
+    padding: 84px 64px 84px;
+  }
+  #trusted .star4 .top-content .mid-content:hover {
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+  }
+  #trusted .star4 .top-content .mid-content p {
+    font-size: 20px;
+    font-weight: 600;
+  }
+  #trusted .star4 .top-content .mid-content img {
+    margin-top: 30px;
+  }
+  #trusted .star4 .top-content .mid-content span {
+    font-weight: 400;
+    color: #4a4a4a;
+  }
+  #trusted .star4 .nulls-more {
+    margin-top: 20px;
+  }
+  #trusted .star4 .nulls-more a {
+    color: gray;
+    padding: 0px 5px;
+  }
+  #trusted .star4 .nulls-more .active {
+    color: black;
+    font-weight: bold;
+  }
+  #inspired .container {
+    width: 90%;
+  }
+  #inspired .container .inspired {
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+  #inspired .container .more-inspired3 {
+    display: none;
+  }
+  #questions .questions-image {
+    grid-template-columns: repeat(2, 1fr);
+  }
+  footer .container .footer {
+    flex-direction: row;
+  }
 }
 @media screen and (max-width: 768px) {
   .container {
     width: 90%;
+  }
+  #top-bar {
+    display: none;
+  }
+  header {
+    height: auto;
+    padding: 20px 0px;
+    flex-direction: column;
+  }
+  header .container {
+    width: 90%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  header nav {
+    display: none;
+  }
+  main .container {
+    width: 90%;
+    height: auto;
+    text-align: center;
+  }
+  main .container .hero {
+    height: auto;
+  }
+  main .container .hero .slogan h2 {
+    color: white;
+  }
+  main .container .hero .search-domain {
+    width: 100%;
+    padding: 0px 20px;
+  }
+  main .container .hero .search-domain input[type=text] {
+    width: 100%;
+    text-align: center;
+    padding: 10px 30px;
+    margin-bottom: 30px;
+    border-radius: 10px;
+  }
+  main .container .hero .search-domain ::placeholder {
+    padding-left: 27px;
+  }
+  main .container .hero .search-domain a {
+    border-radius: 10px;
+  }
+  main .container .hero .hero-prices {
+    padding-top: 50px;
+  }
+  #packages .container {
+    width: 90%;
+  }
+  #packages .container .products h1 {
+    width: 100%;
+    font-size: 23px;
+    text-align: center;
+  }
+  #packages .container .products ul {
+    height: auto;
+    width: 100%;
+  }
+  #packages .container .products ul li {
+    display: inline-block;
+    padding: 10px 0px;
+  }
+  #packages .container .promos {
+    height: 0 auto;
+  }
+  #packages .container .promos h2 {
+    font-size: 21px;
+    width: 100%;
+  }
+  #packages .container .promos p {
+    font-size: 16px;
+    width: 100%;
+  }
+  #packages .container .promos .promos-details1 {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  #packages .container .promos .promos-details1 .promo1 .price p {
+    font-size: 20px;
+  }
+  #trusted {
+    padding-bottom: 100px;
+  }
+  #trusted .container {
+    width: 90%;
+    height: 100%;
+  }
+  #trusted .container .star {
+    width: 100%;
+  }
+  #trusted .container .star p {
+    font-size: 20px;
+    margin-left: 20px;
+  }
+  #trusted .container .star span {
+    font-size: 24px;
+  }
+  #trusted .container .star4 {
+    display: none;
+  }
+  #knowledges .container {
+    width: 90%;
+  }
+  #knowledges .container .titles h2 {
+    font-size: 22px;
+  }
+  #knowledges .container .titles h3 {
+    font-size: 18px;
+  }
+  #knowledges .container .box {
+    grid-template-columns: 1fr;
+    width: 100%;
+  }
+  #inspired .container {
+    width: 90%;
+  }
+  #inspired .container .inspired {
+    grid-template-columns: 1fr;
+  }
+  #inspired .container .inspired img {
+    margin: 20px auto;
+  }
+  #inspired .container .inspired .more-inspired {
+    display: none;
+  }
+  #inspired .container .inspired .more-inspired3 {
+    width: 100%;
+    text-align: center;
+  }
+  #inspired .container .inspired .more-inspired3 p {
+    width: 100%;
+    text-align: center;
+  }
+  #inspired .container .inspired .more-inspired1 {
+    text-align: center;
+    padding-bottom: 30px;
+  }
+  #questions .container {
+    width: 90%;
+  }
+  #questions .container .questions-image {
+    grid-template-columns: 1fr;
+    height: 0 auto;
+  }
+  #questions .container .questions-image .questions ul {
+    padding-bottom: 40px;
+  }
+  #questions .container .questions-image .questions ul li {
+    width: 100%;
+  }
+  #questions .container .questions-image .image img {
+    width: 100%;
+  }
+  footer .container {
+    width: 90%;
+  }
+  footer .container .footer {
+    width: 90%;
+    flex-direction: column;
+  }
+  footer .container .footer .foot1, footer .container .footer .foot2, footer .container .footer .foot3, footer .container .footer .foot4 {
+    padding-bottom: 30px;
   }
 }/*# sourceMappingURL=style.css.map */
