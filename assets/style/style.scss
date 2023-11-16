@@ -81,6 +81,7 @@ section, footer {
                 padding: 0 10px;
                 color: #f2f2f2;
                 display: inline;
+                cursor: pointer;
             }
         }
 
@@ -92,6 +93,7 @@ section, footer {
                 padding: 0 10px;
                 color: #f2f2f2;
                 display: inline;
+                cursor: pointer;
             }
         }
     }
@@ -100,6 +102,10 @@ section, footer {
 header { 
     display: flex;
     align-items: center;
+
+    header i.fa-solid.fa-angle-down {
+        font-size: 10px !important;
+      }
 
     .container {
         display: flex;
@@ -117,7 +123,7 @@ header {
                 font-weight: 600;
                 
                 &:hover {
-                    text-decoration: underline;
+                    text-decoration: none;
                 }
 
                 span {
@@ -138,6 +144,9 @@ main {
         padding: 160px 0px;
         background-image: url('/assets/bg.jpg');
         width: 100%;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
 
         .slogan { 
             text-align: center; 
@@ -184,8 +193,8 @@ main {
          }
 
          .search-domain {
-            text-align: center;
-            align-items: center;
+            display: flex;
+            justify-content: center;
 
             input[type=text] {
                 border: none;
@@ -196,12 +205,13 @@ main {
 
             ::placeholder {
                 font-size: 14px;
+                font-style: italic;
                 float: left;
                 font-family: 'Museo Sans Rounded', sans-serif;
             }
 
             a {
-                padding: 15px 30px;
+                padding: 15px 15px;
                 border-radius: 0px 10px 10px 0px;
                 color: #fff;
                 background-color: #de3723;
@@ -592,6 +602,7 @@ main {
     }
 }
 
+// Questions - fillimi
 #questions {
     .container {
         .titles {
@@ -621,7 +632,9 @@ main {
         }
     }
 }
+//Questions - fund
 
+// Live-Chat - fillimi
 #live-chat {
     border-bottom: 5px solid #8cc1c1;
     .container {
@@ -653,7 +666,9 @@ main {
         }
     }
 }
+// Live Chat - fund
 
+// Footer - fillimi
 footer {
     background-color: $footer;
     .container {
@@ -717,6 +732,7 @@ footer {
         }
     }
 }
+// Footer - fund
 
 
 
@@ -726,8 +742,7 @@ footer {
 
 
 
-// Versions for Mobile and Desktop //
-
+// Verisoni për pajisjet mbi 800px //
 
 @media screen and (min-width: 800px) {
     .container {
@@ -739,6 +754,11 @@ footer {
         flex-direction: row;
     }
 
+    label[for=toggle-menu],
+    input[type=checkbox] {
+        display: none;
+    }
+    
     #packages {
         .promos-details1 {
             grid-template-columns: repeat(3, 1fr);
@@ -838,9 +858,13 @@ footer {
             }
         }
     }
-
 }
 
+// fund
+
+////////////////////////////////////////
+
+// Versioni për pajisjet mobile (smartphones)
 
 @media screen and (max-width: 768px) {
     .container {
@@ -851,20 +875,48 @@ footer {
         display: none;
     }
 
+    input[type=checkbox] {
+        display: none;
+    }
+
+    label[for=toggle-menu] {
+        display: block;
+        position: absolute;
+        top: 30px;
+        right: 20px;
+    }
+
+    label[for=toggle-menu] i {
+        color: #de3723;
+        font-size: 1.5em;
+    }
+
+    .toggle-menu:checked + nav {
+        display: block;
+    }
+
     header {
         height: auto;
         padding: 20px 0px;
         flex-direction: column;
+    }
 
-        .container {
-            width: 90%;
-            flex-direction: column;
-            align-items: flex-start;
-        }
+    header .logo img {
+        height: 45px;
+    }
 
-        nav {
-            display: none;
-        }
+    header .container {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    header nav {
+        display: none;
+        margin-top: 20px;
+    }
+
+    header ul {
+        flex-direction: column;
     }
 
     main { //kryer//
@@ -1088,4 +1140,4 @@ footer {
 
 
   }
-  
+  // fund 

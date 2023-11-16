@@ -73,6 +73,7 @@ section, footer {
   padding: 0 10px;
   color: #f2f2f2;
   display: inline;
+  cursor: pointer;
 }
 #top-bar .top-bar-info .top-right ul li {
   font-family: "Museo Sans Rounded", sans-serif;
@@ -81,11 +82,15 @@ section, footer {
   padding: 0 10px;
   color: #f2f2f2;
   display: inline;
+  cursor: pointer;
 }
 
 header {
   display: flex;
   align-items: center;
+}
+header header i.fa-solid.fa-angle-down {
+  font-size: 10px !important;
 }
 header .container {
   display: flex;
@@ -104,7 +109,7 @@ header ul li a {
   font-weight: 600;
 }
 header ul li a:hover {
-  text-decoration: underline;
+  text-decoration: none;
 }
 header ul li a span {
   background-color: #ff8c44;
@@ -119,6 +124,9 @@ main .container {
   padding: 160px 0px;
   background-image: url("/assets/bg.jpg");
   width: 100%;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
 main .container .slogan {
   text-align: center;
@@ -156,8 +164,8 @@ main .container .register-transfer .second-a:hover {
   background-color: #8cc1c1;
 }
 main .container .search-domain {
-  text-align: center;
-  align-items: center;
+  display: flex;
+  justify-content: center;
 }
 main .container .search-domain input[type=text] {
   border: none;
@@ -167,11 +175,12 @@ main .container .search-domain input[type=text] {
 }
 main .container .search-domain ::placeholder {
   font-size: 14px;
+  font-style: italic;
   float: left;
   font-family: "Museo Sans Rounded", sans-serif;
 }
 main .container .search-domain a {
-  padding: 15px 30px;
+  padding: 15px 15px;
   border-radius: 0px 10px 10px 0px;
   color: #fff;
   background-color: #de3723;
@@ -583,6 +592,10 @@ footer .container .footer .foot2 a, footer .container .footer .foot3 a, footer .
     height: 100px;
     flex-direction: row;
   }
+  label[for=toggle-menu],
+  input[type=checkbox] {
+    display: none;
+  }
   #packages .promos-details1 {
     grid-template-columns: repeat(3, 1fr);
   }
@@ -658,18 +671,40 @@ footer .container .footer .foot2 a, footer .container .footer .foot3 a, footer .
   #top-bar {
     display: none;
   }
+  input[type=checkbox] {
+    display: none;
+  }
+  label[for=toggle-menu] {
+    display: block;
+    position: absolute;
+    top: 30px;
+    right: 20px;
+  }
+  label[for=toggle-menu] i {
+    color: #de3723;
+    font-size: 1.5em;
+  }
+  .toggle-menu:checked + nav {
+    display: block;
+  }
   header {
     height: auto;
     padding: 20px 0px;
     flex-direction: column;
   }
+  header .logo img {
+    height: 45px;
+  }
   header .container {
-    width: 90%;
     flex-direction: column;
     align-items: flex-start;
   }
   header nav {
     display: none;
+    margin-top: 20px;
+  }
+  header ul {
+    flex-direction: column;
   }
   main .container {
     width: 90%;
