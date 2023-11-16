@@ -122,7 +122,7 @@ header ul li a span {
 
 main .container {
   padding: 160px 0px;
-  background-image: url("/assets/bg.jpg");
+  background-image: url(../bg.jpg);
   width: 100%;
   background-position: center;
   background-repeat: no-repeat;
