@@ -12,14 +12,6 @@ $li-a: #6d6e70;
     box-sizing: border-box;    
 }
 
-.background-gray {
-    background-color: #f7f8fd;
-}
-
-.background-dark-gray {
-    background-color: #f2f2f2;
-}
-
 h1 {
     font-weight: 600;
     font-family: 'Museo Sans Rounded', sans-serif;
@@ -51,18 +43,36 @@ ul {
     list-style-type: none;
 }
 
+button {
+    font-family: 'Museo Sans Rounded', sans-serif;
+    cursor: pointer;
+}
+
+.background-gray {
+    background-color: #f7f8fd;
+}
+
+.background-dark-gray {
+    background-color: #f2f2f2;
+}
+
 span {
     font-family: 'Museo Sans Rounded', sans-serif;
 }
 
+// Section & Footer
 section, footer {
     padding: 60px 0px;
 }
+// fund
 
+// Containeri i përgjitshëm
 .container {
     margin: 0 auto;
 }
+// fund
 
+// Top-Bar - fillimi
 #top-bar {
     background-color: $topheader;
     padding: 8px 0;
@@ -98,7 +108,9 @@ section, footer {
         }
     }
 }
+// fund
 
+// Header - fillimi
 header { 
     display: flex;
     align-items: center;
@@ -138,11 +150,13 @@ header {
         }
     }  
 }
+// fund
 
+// Main - fillimi
 main {  
     .container {
         padding: 160px 0px;
-        background-image: url(../bg.jpg);
+        background-image: url(../images/bg.jpg);
         width: 100%;
         background-position: center;
         background-repeat: no-repeat;
@@ -195,6 +209,7 @@ main {
          .search-domain {
             display: flex;
             justify-content: center;
+            align-items: center;
 
             input[type=text] {
                 border: none;
@@ -206,15 +221,20 @@ main {
             ::placeholder {
                 font-size: 14px;
                 font-style: italic;
-                float: left;
                 font-family: 'Museo Sans Rounded', sans-serif;
+                float: left;
             }
 
-            a {
-                padding: 15px 15px;
+            button {
+                padding: 15px 10px;
+                border: none;
                 border-radius: 0px 10px 10px 0px;
                 color: #fff;
                 background-color: #de3723;
+
+                &:hover {
+                    background-color:#ee7062;
+                }
             }
 
          }
@@ -232,10 +252,11 @@ main {
          }
     }
 }
+//fund
 
+//Packages - fillimi
 #packages {
     .container {
-
         .products {
             text-align: center;
 
@@ -288,22 +309,18 @@ main {
 
             .promos-details1 {
                 display: grid;
-                height: 100%;
                 justify-content: center;
                 text-align: center;
                 gap: 50px;
                 padding: 30px 0px;
 
                 .promo1, .promo3 {
-                    margin-left: 30px;
-                    margin-right: 30px;
-                    border-radius: 10px;
+                    padding: 50px 20px;
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-                    background: white none repeat scroll 0 0;
+                    background: white;
                     border-radius: 8px;
                     transition: all .4s ease-in-out;
                     overflow: hidden;
-                    padding: 50px 20px;
 
                     &:hover {
                         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
@@ -347,9 +364,6 @@ main {
                 }
 
                 .promo2 {
-                    margin-right: 30px;
-                    margin-left: 30px;
-                    border-radius: 10px;
                     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
                     background: white none repeat scroll 0 0;
                     border-radius: 8px;
@@ -360,19 +374,16 @@ main {
                         box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
                     }
 
-
                     padding: 50px 20px;
 
                     h3 {
                         font-size: 20px;
                         color: $li-a;
                         padding: 10px 0px;
-                        text-align: left;
                     }
 
                     p {
                         padding: 20px 0px;
-                        text-align: left;
                     }
 
                     .price {
@@ -399,8 +410,6 @@ main {
                         }
                     }
                 }
-
-
             } 
         }
 
@@ -420,11 +429,12 @@ main {
 
                 }
             }
-            
         }
     }
 }
+//fund
 
+// Trusted - fillimi
 #trusted {
     .container {
         text-align: center;
@@ -462,12 +472,17 @@ main {
         }
     }
 }
+// fund
 
+// Knowledges - fillimi
 #knowledges {
+
     .container {
+
         .titles {
             text-align: center;
-            margin-bottom: 10px;
+            margin-bottom: 30px;
+
             h2 {
                 font-size: 30px;
                 font-weight: 400;
@@ -495,13 +510,8 @@ main {
                 background: white none repeat scroll 0 0;
                 border-radius: 8px;
                 color: #666;
-                transition: box-shadow 0.2s ease-in-out 0s;
-                background-clip:content-box;
                 overflow: hidden;
-
-                &:hover {
-                    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
-                }
+                transition: all .4s ease-in-out;
 
                 img {
                     width: 100%;
@@ -520,25 +530,28 @@ main {
                     p {
                         color: #6d6e70;
                         line-height: 1.5;
-                        text-rendering: optimizeLegibility;
                     }
 
                     button {
                         border-radius: 8px;
                         border: none;
-                        background-color: #de3723;
                         color: #fff;
+                        background-color: #de3723;
                         margin-top: 15px;
-                        overflow: hi;
                         width: 100%;
                         padding: 10px 20px;
                     }
+                }
+                &:hover {
+                    transform: scale(1.05);
                 }
             }
         }
     }
 }
+// fund
 
+// Inspired - fillimi
 #inspired {
     .container {
         .inspired {
@@ -596,11 +609,16 @@ main {
                     color: #fff;
                     border: none;
                     border-radius: 0px 8px 8px 0px;
+
+                    &:hover {
+                        background-color:#ee7062;
+                    }
                 }
             }
         }
     }
 }
+//fund
 
 // Questions - fillimi
 #questions {
@@ -620,19 +638,19 @@ main {
                 margin-top: 25px;
 
                 ul li {
+                    width: 80%;
                     padding: 20px 0px;
                     border-bottom: 1px solid $li-a;
-                    width: 80%;
-                    cursor: pointer;
                     font-weight: 500;
                     font-size: 18px;
                     font-family: 'Museo Sans Rounded', sans-serif;
+                    cursor: pointer;
                 }
             }
         }
     }
 }
-//Questions - fund
+//fund
 
 // Live-Chat - fillimi
 #live-chat {
@@ -657,7 +675,6 @@ main {
                 font-weight: 600;
                 border-radius: 8px;
                 padding: 15px 40px;
-                cursor: pointer;
 
                 &:hover {
                     color: black;
@@ -666,7 +683,7 @@ main {
         }
     }
 }
-// Live Chat - fund
+// fund
 
 // Footer - fillimi
 footer {
@@ -712,6 +729,7 @@ footer {
             }
 
             .foot2, .foot3, .foot4 {
+
                 ul li {
                     padding: 10px 0px;
                 }
@@ -732,13 +750,10 @@ footer {
         }
     }
 }
-// Footer - fund
-
-
+// fund
 
 
 // Verisoni për pajisjet mbi 800px //
-
 @media screen and (min-width: 800px) {
     .container {
       width: 1320px;
@@ -854,13 +869,11 @@ footer {
         }
     }
 }
-
 // fund
 
 ////////////////////////////////////////
 
 // Versioni për pajisjet mobile (smartphones)
-
 @media screen and (max-width: 768px) {
     .container {
         width: 90%;
@@ -883,7 +896,7 @@ footer {
 
     label[for=toggle-menu] i {
         color: #de3723;
-        font-size: 1.5em;
+        font-size: 28px;
     }
 
     .toggle-menu:checked + nav {
@@ -897,7 +910,8 @@ footer {
     }
 
     header .logo img {
-        height: 45px;
+        width: 210px;
+        height: 30px;
     }
 
     header .container {
@@ -914,7 +928,18 @@ footer {
         flex-direction: column;
     }
 
-    main { //kryer//
+    header ul li {
+        padding: 5px 0px;
+        border-bottom: 2px solid #666;
+        width: 100%;
+    }
+
+    header ul li a {
+        font-size: 25px; 
+        padding-left: 20px;
+    }
+
+    main { 
         .container {
             width: 90%;
             height: auto;
@@ -934,17 +959,17 @@ footer {
                     input[type=text] {
                         width: 100%;
                         text-align: center;
-                        padding: 10px 30px;
-                        margin-bottom: 30px;
-                        border-radius: 10px;
+                        padding: 15px 30px;
+                        border-radius: 10px 0px 0px 10px;
                     }
 
                     ::placeholder {
-                        padding-left: 27px;
+                        font-size: 13px;
                     }
 
-                    a {
-                        border-radius: 10px;
+                    button {
+                        padding: 15px 10px;
+                        border-radius: 0px 10px 10px 0px;
                     }
                 }
 
@@ -1118,7 +1143,9 @@ footer {
     }
 
     footer {
+
         .container {
+
             width: 90%;
             .footer {
                 width: 90%;
@@ -1130,9 +1157,5 @@ footer {
             }
         }
     }
-
-
-
-
   }
   // fund 
